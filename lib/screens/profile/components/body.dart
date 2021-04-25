@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+import 'package:haradan/screens/sign_in/sign_in_screen.dart';
+import 'package:haradan/services/google_login_services.dart';
+import 'package:haradan/services/login_user_model.dart';
+import 'package:provider/provider.dart';
+
+import 'profile_menu.dart';
+import 'profile_pic.dart';
+
+class Body extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    LoginService loginService =Provider.of<LoginService>(context,listen: false);
+    LoginUserModel userModel = loginService.loggedInUserModel;
+    String userImg =userModel != null ? userModel.photoUrl :'';
+    return SingleChildScrollView(
+      padding: EdgeInsets.symmetric(vertical: 20),
+      child: Column(
+        children: [
+          ProfilePic(),
+          SizedBox(height: 20),
+          ProfileMenu(
+            text: "Hesabım",
+            icon: "assets/icons/User Icon.svg",
+            press: () => {},
+          ),
+          ProfileMenu(
+            text: "Bildirimler",
+            icon: "assets/icons/Bell.svg",
+            press: () {},
+          ),
+          ProfileMenu(
+            text: "Ayarlar",
+            icon: "assets/icons/Settings.svg",
+            press: () {},
+          ),
+          ProfileMenu(
+            text: "Help Center",
+            icon: "assets/icons/Question mark.svg",
+            press: () {},
+          ),
+
+          ProfileMenu(
+            text: "İlan ver",
+            icon: "assets/icons/add.svg",
+            press: () {},
+          ),
+          ProfileMenu(
+            text: "Log Out",
+            icon: "assets/icons/Log out.svg",
+            press: () async{
+              loginService.signOut();
+              Navigator.push(context, MaterialPageRoute(builder: (ctx)=>SignInScreen()));
+
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "972689783870",
+    "project_id": "haradan-9b8a1",
+    "storage_bucket": "haradan-9b8a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972689783870:android:cb5af0f76e80c9c11a256f",
+        "android_client_info": {
+          "package_name": "com.example.haradan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972689783870-0cf3sbkvhibn75fh43peadtnf7ue247h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.haradan",
+            "certificate_hash": "8824fba08f70dbd5fc21f58a901e6fda2155f5c5"
+          }
+        },
+        {
+          "client_id": "972689783870-sqc4rshamtdmgmhusumtsfjt9i80g26n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmMlW_DReQDx0jBSEXOBNGItKj_COZa_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972689783870-sqc4rshamtdmgmhusumtsfjt9i80g26n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
